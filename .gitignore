@@ -1,5 +1,9 @@
 # Compiled class file
 *.class
+.idea/
+java_project.iml
+out/
+DVDinformation.txt
 
 # Log file
 *.log
