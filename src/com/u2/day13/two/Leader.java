@@ -1,4 +1,4 @@
-package com.kgc.u2.day13.two;
+package com.u2.day13.two;
 
 public class Leader implements Person {
     @Override

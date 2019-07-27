@@ -1,4 +1,4 @@
-package com.kgc.u2.day13.two;
+package com.u2.day13.two;
 
 public class Test {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 public class MyOverideParse {
     public static void main(String[] args) throws Exception{
-     Class studentClass=Class.forName("com.kgc.u3.day23.myannotation.Student");
+     Class studentClass=Class.forName("com.u3.day23.myannotation.Student");
         Method[] studentMethods = studentClass.getDeclaredMethods();
         Method[] superMethods = studentClass.getSuperclass().getDeclaredMethods();
         for (Method method :studentMethods) {
