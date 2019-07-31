@@ -50,5 +50,5 @@
 
 ##### html
 
-- [基本标签练习](https://github.com/xiaohua9/java_project/tree/master/extend/html)
+- [基本标签练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day1)
 
