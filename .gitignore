@@ -4,7 +4,7 @@
 java_project.iml
 out/
 DVDinformation.txt
-
+.project
 # Log file
 *.log
 
