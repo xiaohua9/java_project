@@ -51,4 +51,5 @@
 ##### html
 
 - [基本标签练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day1)
+- [单选框，多选框，下拉框，框架集，css练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day2)
 
