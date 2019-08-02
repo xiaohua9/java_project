@@ -53,4 +53,5 @@
 - [基本标签练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day1)
 - [单选框，多选框，下拉框，框架集，css练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day2)
 - [简单的个人博客页面制作](https://github.com/xiaohua9/java_project/tree/master/extend/html/day3)
+- [结合html的事件响应练习js的基本语法、排序算法、菱形输出](https://github.com/xiaohua9/java_project/tree/master/extend/html/day4)
 
