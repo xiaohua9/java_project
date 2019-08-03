@@ -64,7 +64,7 @@ function showDate(){
 	var date=new Date();
 	alert(date.getYear()+1900+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSeconds()+"秒");
 }
-//在页面上输出一个菱形
+//在页面上输出一个菱形，拆分思想
 function rhombus(){
 	var rows=5;
 	for (var i=0;i<(rows+1)/2;i++) {
@@ -86,6 +86,35 @@ function rhombus(){
 		document.write("<br/>");
 	}
 }
+//在页面上输出一个菱形，绝对值函数思想
+function rhombus2(){
+	var height=7;
+	for (var i=(height-1)/2;Math.abs(i)<=(height-1)/2;i--) {
+		for (var j=1;j<=Math.abs(i);j++) {
+			document.write("&nbsp");
+		}
+		for (var k=1;k<=(height-Math.abs(i)*2);k++) {
+			document.write("*");
+		}
+		document.write("<br />");
+	}
+}
+//在页面上输出对顶三角形
+function triangle(){
+	var height=5;
+	for (var i=5;Math.abs(i)<=height;i-=2) {
+		if (i!=-1) {
+			for (var j=1;j<=(height-Math.abs(i))/2;j++) {
+				document.write("&nbsp");
+			}
+			for (var k=1;k<=Math.abs(i);k++) {
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+	}
+}
+
 //冒泡排序
 
 function orderM(){
