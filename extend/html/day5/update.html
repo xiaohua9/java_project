@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--通过上传图片练习事件响应和dom-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function addPic(){//增加上传的方法
+				//先构建一个自定义列表项
+				var newdd=document.createElement("dd");
+				//构建一个文件类型的表单元素
+				var input1=document.createElement("input");
+				input1.type="file";
+				input1.name="pic";
+				//进行添加
+				newdd.appendChild(input1);
+				//最后添加到页面的自定义列表中
+				document.getElementById("dl1").appendChild(newdd);
+			}
+			function deletePic(){//删除不需要的上传项
+				var tmp=document.getElementsByName("pic");
+				tmp[tmp.length-1].parentNode.remove();
+			}
+		</script>
+	</head>
+	<body>
+		<dl id="dl1">
+			<dt>图片上传</dt>
+			<!--第一个是底线，不能被删-->
+			<dd><input type="file" name="pic" /></dd>
+		</dl>
+		<input type="button" value="增加一个" onclick="addPic()"/>
+		<input type="button" value="删除最后一个" onclick="deletePic()"/>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--通过单选、多选练习事件响应、获取HTML信息-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function show(){
+				var inp= document.getElementsByName("choose");//获取所有name为choose的标签
+				var str="";
+				for (var i=0;i<inp.length;i++) {
+					if (inp[i].checked==true) {//说明该复选框被选中了
+						str=str+inp[i].value+",";	
+					}
+				}
+				if (str.length>1) {
+					alert("你选了"+str);
+				} else{
+					alert("你还没有选择");
+				}
+			}
+			//如果全选被选中，那将所有的项全部选中,再点一次就是取消全部的选中
+			function showAll(){
+				var allTmp=document.getElementById("all");
+				if (allTmp.checked==true) {
+					var inp= document.getElementsByName("choose");//获取所有name为choose的标签
+					for (var i=0;i<inp.length;i++) {
+						inp[i].checked=true;//该复选框被选中了
+					}
+				} else{
+					var inp= document.getElementsByName("choose");//获取所有name为choose的标签
+					for (var i=0;i<inp.length;i++) {
+						inp[i].checked=false;//该复选框不被选中了
+					}
+				}
+			}
+			function showPic(){//显示图片
+				document.getElementById("pic").innerHTML="<img src='../picture/2.jpg' />";
+			}
+			function noneShow(){//取消图片显示
+				document.getElementById("pic").innerHTML="";
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1" width="300px">
+			<tr>
+				<td>
+					<!--选中全部的事件响应-->
+					全选<input type="checkbox" id="all" onclick="showAll()"/>
+				</td>
+				<td>编号</td><td>姓名</td><td>图片</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="choose"  value="101" />
+				</td>
+				<td>101</td><td>张三</td><td onmouseover="showPic()" onmouseout="noneShow()" style="color: red">鼠标放这里</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="choose"  value="102" />
+				</td>
+				<td>102</td><td>李四</td><td>暂未开发</td>
+			</tr>
+		</table>
+		<!--提交当前的选中情况的事件响应-->
+		<input type="button" value="提交选中状态" onclick="show()" />
+		<div id="pic" ></div><!--显示图片的地方-->
+	</body>
+</html>
