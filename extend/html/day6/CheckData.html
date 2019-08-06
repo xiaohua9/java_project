@@ -1,0 +1,56 @@
+<!--练习表单数据的验证-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单数据验证</title>
+		<style type="text/css">
+			/*稍微调整下提交和重置的位置*/
+			.set{
+				margin-left: 50px;
+			}
+		</style>
+		<script>
+			function checkData(){//表单数据验证
+				var flag=true;//不出意外就让提交
+				
+				//判断账号的合法性
+				if (userName.value.length<1) {
+					flag=false;//如果账号为空，不可提交，并且给出红色字体提示
+					errorInfo1.style.color="red";
+					errorInfo1.innerText="账号不能为空";
+				}else{
+					errorInfo1.innerText="";//合格的情况下，取消警告显示
+				}
+				//判断密码的合法性
+				if (userPwd.value.length<6) {
+					flag=false;//如果密码小于6位，不可提交，并且给出红色字体提示
+					errorInfo2.style.color="red";
+					errorInfo2.innerText="密码不能少于6位";
+				}else{
+					errorInfo2.innerText="";//合格的情况下，取消警告显示
+				}
+				//判断邮箱的合法性
+				var emailMatch=/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+				if (!emailMatch.test(userEmail.value)) {
+					flag=false;//如果不合法，不可提交，并且给出红色字体提示
+					errorInfo3.style.color="red";
+					errorInfo3.innerText="邮箱不合法";
+				}else{
+					errorInfo3.innerText="";//合格的情况下，取消警告显示
+				}
+				
+				return flag;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="MyTime.html" onsubmit="return checkData()"><!--//使用表单验证事件监听器//该事件在提交表单时触发-->
+			账号：<input type="text" name="userName" id="userName" /><span id="errorInfo1"></span><br/>
+			密码：<input type="password" name="userPwd" id="userPwd"/><span id="errorInfo2"></span><br/>
+			邮箱：<input type="text" name="userEmail" id="userEmail"/><span id="errorInfo3"></span><br/>
+			<input type="submit" value="提交" / class="set">
+			<input type="reset" value="重置" / clclass="set"></br/>
+		</form>
+	</body>
+</html>

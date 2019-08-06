@@ -1,0 +1,39 @@
+<!--以图片模拟广告，在网页中飞来飞去//当鼠标压上时，暂停图片的飘动，离开时又开始飘动
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>飞翔的图片</title>
+		<style type="text/css">
+			#pic{
+				position: absolute;//使得该图片的定位为绝对定位
+			}
+		</style>
+		<script>
+			var timer;//存储回调方法的返回值
+			var y=0;//纵坐标
+			var x=0;//横坐标
+			function FlyPic(){//使图片飞起来的方法
+				var tmpPic=document.getElementById("pic");//得到img标签
+				tmpPic.style.top=y+"px";
+				tmpPic.style.left=x+"px";
+				y+=10;//每回调一次的纵轴增量
+				x+=20;//每回调一次 的横轴增量
+				if (y>600) {//保证图片不跑到页面的外面
+					y=0;
+				}
+				if (x>1450) {//同理
+					x=0;
+				}
+				timer=setTimeout("FlyPic()",80);//每80毫秒回调一次
+			}
+			function stop(){
+				clearTimeout(timer);//当鼠标压上时，暂停图片的飘动
+			}
+		</script>
+	</head>
+	<body onload="FlyPic()"><!--开始系统自动调用，//当鼠标压上时，暂停图片的飘动，离开时又开始飘动-->
+		<div id="pic" onmouseover="stop()" onmouseout="FlyPic()"></span><img src="../picture/2.jpg" /></div>
+	</body>
+</html>

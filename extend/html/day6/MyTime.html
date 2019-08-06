@@ -1,0 +1,25 @@
+<!--实时显示时间，并且能够随时停止和开始-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var tmpStop;//继续延迟调用的放回句柄，用于停止调用
+			function start(){
+				var tmp=new Date().toLocaleString();//得到当前时间
+				var myTime=document.getElementById("time");
+				myTime.innerText=tmp;//将时间显示在我指定的位置
+				tmpStop=setTimeout("start()",1000);//实时显示时间的核心，延迟递归
+			}
+			function stop(){
+				clearTimeout(tmpStop);//停止递归
+			}
+		</script>
+	</head>
+	<body onload="start()"><!--//系统自动加载调用-->
+		<span id="time"></span><!--//显示时间的地方-->
+		<input type="button" value="继续" onclick="start()"/><!--继续时间的功能按钮-->
+		<input type="button" value="停止" onclick="stop()"/><!--停止时间的功能按钮-->
+	</body>
+</html>
