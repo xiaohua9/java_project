@@ -56,4 +56,5 @@
 - [结合html的事件响应练习js的基本语法、排序算法、菱形输出](https://github.com/xiaohua9/java_project/tree/master/extend/html/day4)
 - [事件响应、dom练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day5)
 - [实时变化时间显示，飞翔的广告，图片轮播，表单数据验证](https://github.com/xiaohua9/java_project/tree/master/extend/html/day6)
+- [sql练习](https://github.com/xiaohua9/java_project/tree/master/extend/mysql)
 
