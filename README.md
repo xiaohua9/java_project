@@ -46,6 +46,10 @@
 - [在网络中传输图片](https://github.com/xiaohua9/java_project/tree/master/src/com/u3/day25later)
 - [xml解析与Java对象互转，也有用到递归](https://github.com/xiaohua9/java_project/tree/master/src/com/u3/day26)
 
+##### Java-jdbc
+
+- [dao模式下jdbc练习](https://github.com/xiaohua9/java_project/tree/master/src/com/u4/day1)
+
 #### 向导（extend部分）
 
 ##### html
@@ -57,4 +61,3 @@
 - [事件响应、dom练习](https://github.com/xiaohua9/java_project/tree/master/extend/html/day5)
 - [实时变化时间显示，飞翔的广告，图片轮播，表单数据验证](https://github.com/xiaohua9/java_project/tree/master/extend/html/day6)
 - [sql练习](https://github.com/xiaohua9/java_project/tree/master/extend/mysql)
-
