@@ -1,11 +1,8 @@
 package com.u4.day1.util;
-
 import com.u4.day1.entity.Person;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 //人的操作工具类
 public class PersonUtil {
     //向数据库增删改数据

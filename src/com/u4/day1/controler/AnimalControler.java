@@ -1,9 +1,6 @@
 package com.u4.day1.controler;
-
 import com.u4.day1.dao.AnimalDao;
-import com.u4.day1.dao.PersonDao;
 import com.u4.day1.entity.Animal;
-import com.u4.day1.entity.Person;
 //动物的操作层
 public class AnimalControler {
     public static void main(String[] args) throws Exception{

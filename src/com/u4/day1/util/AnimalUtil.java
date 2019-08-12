@@ -1,13 +1,10 @@
 package com.u4.day1.util;
-
 import com.u4.day1.entity.Animal;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 //动物的工具类
 public class AnimalUtil {
     //向数据库增删改数据

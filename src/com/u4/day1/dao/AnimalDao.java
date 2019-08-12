@@ -1,12 +1,7 @@
 package com.u4.day1.dao;
-
 import com.u4.day1.entity.Animal;
-import com.u4.day1.entity.Person;
 import com.u4.day1.util.AnimalUtil;
-import com.u4.day1.util.PersonUtil;
-
 import java.util.List;
-
 //动物的数据库访问
 public class AnimalDao {
     //增加数据,返回增加的条数

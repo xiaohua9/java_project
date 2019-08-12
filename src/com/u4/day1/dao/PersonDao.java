@@ -1,10 +1,7 @@
 package com.u4.day1.dao;
-
 import com.u4.day1.entity.Person;
 import com.u4.day1.util.PersonUtil;
-
 import java.util.List;
-
 //人的数据库访问类
 public class PersonDao {
     //增加数据,返回增加的条数
