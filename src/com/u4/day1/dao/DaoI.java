@@ -1,9 +1,13 @@
 package com.u4.day1.dao;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 import java.util.List;
 
 //dao的顶层泛型接口
 public interface DaoI<T> {
+    //获取数据库连接池，所有的dao都会用到这个池子
+    public static final ComboPooledDataSource dataSource=new ComboPooledDataSource();
     //插入数据
     public int insert(T t);
     //删除数据
