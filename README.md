@@ -50,6 +50,10 @@
 
 - [dao模式下jdbc练习](https://github.com/xiaohua9/java_project/tree/master/src/com/u4/day1)
 
+##### Java-junit
+
+- [junit测试单元练习，使用@Test注解](https://github.com/xiaohua9/java_project/tree/master/test/mytest)
+
 #### 向导（extend部分）
 
 ##### html
