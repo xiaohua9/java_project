@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript">
+			$(function(){/*隔行 变色*/
+				$("table,td,tr,th").css({"border":"1px solid","width":"800px","text-align":"center"});
+				$("tr:odd").css("background-color","lightgreen");/*奇数行显示浅绿色*/
+			});
+			$(function(){/*全选与取消*/
+				$("#all").click(function(){
+					$(".one").prop("checked",$("#all").prop("checked"));/*将全选的选中状态赋值给各个分项*/
+				});
+			});
+			$(function(){//增加,删除选中的行
+				$("#addd").click(function(){
+					$("table").append("<tr><td><input type='checkbox' class='one' name='aa'/></td><td>赵六</td><td>深圳</td></tr>");
+					/*此处需要吧样式执行一下，不然就没有样式，因为脚本语言是至上而下执行的*/
+					$("table,td,tr,th").css({"border":"1px solid","width":"800px","text-align":"center"});
+				    $("tr:odd").css("background-color","lightgreen");/*奇数行显示浅绿色*/
+				});
+				
+			});
+			$(function(){
+				$(function(){
+					$("#dell").click(function(){
+						$(".one[checked='checked']").parent().parent().remove();
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<table >
+			<tr>
+				<th><input type="checkbox" id="all"/>全选</th><th>姓名</th><th>地址</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="one"  name="aa"/></td><td>张三</td><td>武汉</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="one" name="aa"/></td><td>李四</td><td>北京</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="one" name="aa"/></td><td>王五</td><td>上海</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="one" checked="checked" name="aa"/></td><td>赵六</td><td>深圳</td>
+			</tr>
+		</table>
+		<input type="button" value="增加" id="addd" />
+		<input type="button" value="删除"  id="dell" />
+	</body>
+</html>
